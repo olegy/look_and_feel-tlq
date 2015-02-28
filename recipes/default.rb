@@ -8,8 +8,12 @@ package 'vim'
 # Because not everyone will send us nice  .tar.gz files
 package 'unzip'
 
-locales "Add locales" do
-  locales node["look_and_feel-tlq"]["additional_locales"]
+cookbook_file '/usr/local/bin/subl' do
+  source 'subl'
+  owner 'root'
+  group 'root'
+  mode 00755
+  action :create_if_missing
 end
 
 # Add a banner to ssh login if we're in the production environment

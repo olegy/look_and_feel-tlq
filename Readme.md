@@ -8,3 +8,7 @@ server. In particular:
 to top)
 - Install unzip
 - Add an ASCI art banner on login to production environments
+- Add `subl` command for editing remote files in Sublime Text
+    To make it work:
+      - Install the `rsub` package in Sublime Text using the Package Manager
+      - add `-R 52698:localhost:52698` to your `ssh` command
